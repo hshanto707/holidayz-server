@@ -58,8 +58,8 @@ async function run() {
 
     app.get("/cart/:uid", async (req, res) => {
       const uid = req.params.uid;
-      const query = { uid: uid };
-      console.log(query)
+      console.log(uid);
+      const query = { uid : uid };
       const result = await cartCollection.find(query).toArray();
       res.json(result);
     });
